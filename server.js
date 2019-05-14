@@ -9,6 +9,9 @@ Promise.resolve()
   .then(() => {
     app.listen(port);
 
-    logger.info(`Listening on port: ${port}`);
+    // eslint-disable-next-line no-constant-condition
+    while (1) {
+      logger.info(`Listening on port: ${port}`);
+    }
   })
   .catch(logger.error);
